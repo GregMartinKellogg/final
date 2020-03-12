@@ -3,8 +3,8 @@
 <div class="row">
         <div class="col-md-4">
         <h4>
-        <% for event in @events %>
-            <p><a href="/events/<%= event[:id] %>"><%= event[:title] %></a></p>
+        <% for location in @locations %>
+            <p><a href="/locations/<%= location[:id] %>"><%= location[:title] %></a></p>
         <% end %>
         </h4>
 

@@ -1,5 +1,5 @@
 h2, h3, h4, h5, h6 {
-    font-family: 'Arvo', serif;
+    font-family: 'Anton', sans-serif;
 }
 
 .jumbotron {
@@ -19,7 +19,7 @@ body {
 
   /* And the "logo" */
   .navbar-brand {
-    font-family: 'Sigmar One', cursive;
+    font-family: 'Righteous', cursive;
     font-size: 30px;
   }
   .navbar-light .navbar-brand {

@@ -5,7 +5,7 @@ DB = Sequel.connect(connection_string)                                          
 #######################################################################################
 
 # Database schema - this should reflect your domain model
-DB.create_table! :events do
+DB.create_table! :locations do
   primary_key :id
   String :title
   String :description, text: true
@@ -14,7 +14,7 @@ DB.create_table! :events do
 end
 DB.create_table! :rsvps do
   primary_key :id
-  foreign_key :event_id
+  foreign_key :location_id
   foreign_key :user_id
   Boolean :going
   String :comments, text: true
@@ -27,34 +27,34 @@ DB.create_table! :users do
 end
 
 # Insert initial (seed) data
-events_table = DB.from(:events)
+locations_table = DB.from(:locations)
 
-events_table.insert(title: "Alger", 
+locations_table.insert(title: "Alger", 
                     description: "Here we go again bacon burger taco fans, another Bacon Burger Taco Fest is here!",
                     date: "June 21",
                     location: "Kellogg Global Hub")
 
-events_table.insert(title: "Alpena", 
+locations_table.insert(title: "Alpena", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
                     date: "July 4",
                     location: "Nowhere")
 
-events_table.insert(title: "Cheboygan", 
+locations_table.insert(title: "Cheboygan", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
                     date: "July 4",
                     location: "Nowhere")
 
-events_table.insert(title: "Grand Traverse", 
+locations_table.insert(title: "Grand Traverse", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
                     date: "July 4",
                     location: "Nowhere")
 
-events_table.insert(title: "Oscoda", 
+locations_table.insert(title: "Oscoda", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
                     date: "July 4",
                     location: "Nowhere")
 
-events_table.insert(title: "Roscommon", 
+locations_table.insert(title: "Roscommon", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
                     date: "July 4",
                     location: "Nowhere")

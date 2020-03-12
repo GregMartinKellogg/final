@@ -2,12 +2,14 @@
     <div class="col-sm-9">
         <h2>
             <i class="far fa-calendar-alt"></i>
-            <%= @event[:date] %>
+            <%= @location[:date] %>
         </h2>
-        <h1><%= @event[:title] %></h1>
-        <p><%= @event[:description] %></p>
-        <% for rsvp in @rsvps %>
-            <div class="media">
+        <h1><%= @location[:title] %></h1>
+        <p><%= @location[:description] %></p>
+        <% for rsvp in @rsvps%>
+        
+        
+        <div class="media">
                 <% if rsvp[:going] %>
                     <i class="fas fa-thumbs-up fa-3x mr-3"></i>
                 <% else %>
@@ -21,7 +23,7 @@
         <% end %>
         <p class="mt-5">
             <% if @current_user %>
-                <a href="/events/<%= @event[:id] %>/rsvps/new" class="btn btn-primary">RSVP now!</a>
+                <a href="/locations/<%= @location[:id] %>/rsvps/new" class="btn btn-primary">RSVP now!</a>
             <% else %>
                 <a href="/logins/new" class="btn btn-danger">Please sign in to RSVP</a>
             <% end %>
@@ -29,9 +31,9 @@
     </div>
     <div class="col-sm-3">
         <h3>When?</h3>
-        <p><%= @event[:date] %></p>
+        <p><%= @location[:date] %></p>
         <h3>Where?</h3>
-        <p><%= @event[:location] %></p>
+        <p><%= @location[:location] %></p>
         <h3>How many guests so far?</h3>
         <p><%= @going_count %></p>
     </div>

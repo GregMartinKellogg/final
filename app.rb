@@ -14,7 +14,7 @@ before { puts; puts "--------------- NEW REQUEST ---------------"; puts }       
 after { puts; }                                                                       #
 #######################################################################################
 
-events_table = DB.from(:events)
+locations_table = DB.from(:locations)
 rsvps_table = DB.from(:rsvps)
 users_table = DB.from(:users)
 
@@ -23,28 +23,28 @@ before do
 end
 
 get "/" do
-    puts events_table.all
-    @events = events_table.all.to_a
-    view "events"
+    puts locations_table.all
+    @locations = locations_table.all.to_a
+    view "locations"
 end
 
-get "/events/:id" do
-    @event = events_table.where(id: params[:id]).to_a[0]
-    @rsvps = rsvps_table.where(event_id: @event[:id])
-    @going_count = rsvps_table.where(event_id: @event[:id], going: true).count
+get "/locations/:id" do
+    @location = locations_table.where(id: params[:id]).to_a[0]
+    @rsvps = rsvps_table.where(location_id: @location[:id])
+    @going_count = rsvps_table.where(location_id: @location[:id], going: true).count
     @users_table = users_table
-    view "event"
+    view "location"
 end
 
-get "/events/:id/rsvps/new" do #figure it out
-    @event = events_table.where(id: params[:id]).to_a[0]
+get "/locations/:id/rsvps/new" do #figure it out
+    @location = locations_table.where(id: params[:id]).to_a[0]
     view "new_rsvp"
 end
 
-get "/events/:id/rsvps/create" do
+get "/locations/:id/rsvps/create" do
     puts params
-    @event = events_table.where(id: params["id"]).to_a[0]
-    rsvps_table.insert(event_id: params["id"],
+    @location = locations_table.where(id: params["id"]).to_a[0]
+    rsvps_table.insert(location_id: params["id"],
                        user_id: session["user_id"],
                        going: params["going"],
                        comments: params["comments"])
