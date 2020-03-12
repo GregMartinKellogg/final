@@ -1,0 +1,33 @@
+h2, h3, h4, h5, h6 {
+    font-family: 'Arvo', serif;
+}
+
+.jumbotron {
+    background-attachment: fixed;
+    background-image: url(https://mtprinceton.com/wp-content/uploads/snowmobiling.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* Typography */
+body {
+    /* Everything is Raleway */
+    font-family: 'Raleway', sans-serif;
+  }
+
+  /* And the "logo" */
+  .navbar-brand {
+    font-family: 'Sigmar One', cursive;
+    font-size: 30px;
+  }
+  .navbar-light .navbar-brand {
+    color: black;
+  }
+  
+  /* Navbar background color */
+  .navbar {
+    background-color: white;
+  }
+  .button { color: black;}

@@ -1,5 +1,15 @@
-<h1>All Events</h1>
+<h1>Popular Counties</h1>
 
-<% for event in @events %>
-    <p><a href="/events/<%= event[:id] %>"><%= event[:title] %></a></p>
-<% end %>
+<div class="row">
+        <div class="col-md-4">
+        <h4>
+        <% for event in @events %>
+            <p><a href="/events/<%= event[:id] %>"><%= event[:title] %></a></p>
+        <% end %>
+        </h4>
+
+        </div>
+        <div class="col-md-6">
+        <img src='https://www.michigan.gov/images/recreation/web_snowmobile2015_508847_7.png' width="500" height="500" />
+        </div>   
+</div>

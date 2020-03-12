@@ -18,9 +18,44 @@
     <!-- Your own CSS -->
     <link rel="stylesheet" href="/styles.css">
 
-    <title>Hello world!</title>
+    <title>Trail Status</title>
   </head>
   <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">Trail Status</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/new">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logins/new">Sign In</a>
+                </li>
+            </ul>
+            <% if @current_user %>
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-text">
+                        Logged in as <%= @current_user[:name] %>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link">Logout</a>
+                    </li>
+                </ul>
+            <% end %>
+        </div>
+    </nav>
+<p>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Trail Status</h1 class="display-4">
+        <p class="lead">Your one stop shop to find where to ride</p>
+      </div>
+    </div>
+</p>
 
     <div class="container mt-5">
       <%= yield %>

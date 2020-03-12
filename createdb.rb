@@ -29,12 +29,32 @@ end
 # Insert initial (seed) data
 events_table = DB.from(:events)
 
-events_table.insert(title: "Bacon Burger Taco Fest", 
+events_table.insert(title: "Alger", 
                     description: "Here we go again bacon burger taco fans, another Bacon Burger Taco Fest is here!",
                     date: "June 21",
                     location: "Kellogg Global Hub")
 
-events_table.insert(title: "Kaleapolooza", 
+events_table.insert(title: "Alpena", 
+                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
+                    date: "July 4",
+                    location: "Nowhere")
+
+events_table.insert(title: "Cheboygan", 
+                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
+                    date: "July 4",
+                    location: "Nowhere")
+
+events_table.insert(title: "Grand Traverse", 
+                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
+                    date: "July 4",
+                    location: "Nowhere")
+
+events_table.insert(title: "Oscoda", 
+                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
+                    date: "July 4",
+                    location: "Nowhere")
+
+events_table.insert(title: "Roscommon", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
                     date: "July 4",
                     location: "Nowhere")
