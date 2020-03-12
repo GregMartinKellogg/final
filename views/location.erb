@@ -1,9 +1,6 @@
 <div class="row">
-    <div class="col-sm-9">
-        <h2>
-            <i class="far fa-calendar-alt"></i>
-            <%= @location[:date] %>
-        </h2>
+    <div class="col-sm-4">
+
         <h1><%= @location[:title] %></h1>
         <p><%= @location[:description] %></p>
         <% for rsvp in @rsvps%>
@@ -23,18 +20,21 @@
         <% end %>
         <p class="mt-5">
             <% if @current_user %>
-                <a href="/locations/<%= @location[:id] %>/rsvps/new" class="btn btn-primary">RSVP now!</a>
+                <a href="/locations/<%= @location[:id] %>/rsvps/new" class="btn btn-primary">Update the trails now!</a>
             <% else %>
-                <a href="/logins/new" class="btn btn-danger">Please sign in to RSVP</a>
+                <a href="/logins/new" class="btn btn-danger">Please sign in to update trail status</a>
             <% end %>
         </p>
     </div>
-    <div class="col-sm-3">
-        <h3>When?</h3>
-        <p><%= @location[:date] %></p>
-        <h3>Where?</h3>
+
+    <div class="col-sm-6">
+        <img src=<%= @location[:date] %> width="500" height="500" />
+    </div>
+
+    <div class="col-sm-2">
+        <h4>Where?</h4>
         <p><%= @location[:location] %></p>
-        <h3>How many guests so far?</h3>
+        <h4>Number of Reviews?</h4>
         <p><%= @going_count %></p>
     </div>
 </div>

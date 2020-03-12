@@ -35,26 +35,26 @@ locations_table.insert(title: "Alger",
                     location: "Kellogg Global Hub")
 
 locations_table.insert(title: "Alpena", 
-                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "July 4",
+                    description: "It always beautiful riding on Thunder Bay",
+                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
                     location: "Nowhere")
 
 locations_table.insert(title: "Cheboygan", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "July 4",
+                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
                     location: "Nowhere")
 
 locations_table.insert(title: "Grand Traverse", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "July 4",
+                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
                     location: "Nowhere")
 
 locations_table.insert(title: "Oscoda", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "July 4",
+                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
                     location: "Nowhere")
 
 locations_table.insert(title: "Roscommon", 
                     description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "July 4",
+                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
                     location: "Nowhere")

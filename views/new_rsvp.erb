@@ -1,15 +1,17 @@
 <h2>
     <i class="far fa-calendar-alt"></i>
-    <%= @event[:date] %>
-</h2>
-<h1>RSVP for <%= @event[:title] %></h1>
+    <%= @location[:date] %>
 
-<form action="/events/<%= @event[:id] %>/rsvps/create">
+</h2>
+<h1>Give your review of the trails in <%= @location[:title] %></h1>
+
+<form action="/locations/<%= @location[:id] %>/rsvps/create">
+
   <div class="form-group">
-    <label>Are you going?</label>
+    <label>Would you recommend?</label>
     <select class="form-control" name="going">
-      <option value="1">Yes</option>
-      <option value="0">No</option>
+      <option value="1">Yes I would recommend</option>
+      <option value="0">No, those trails suck</option>
     </select>
   </div>
   <div class="form-group">
