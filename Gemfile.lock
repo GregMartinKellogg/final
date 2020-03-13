@@ -5,6 +5,12 @@ GEM
     bcrypt (3.1.13)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
+    forecast_io (2.0.2)
+      faraday
+      hashie
+      multi_json
+    geocoder (1.6.1)
+    hashie (4.1.0)
     jwt (2.2.1)
     mini_portile2 (2.4.0)
     multi_json (1.14.1)
@@ -43,6 +49,8 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  forecast_io
+  geocoder
   pg
   sequel
   sinatra

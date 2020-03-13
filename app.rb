@@ -25,6 +25,8 @@ end
 get "/" do
     puts locations_table.all
     @locations = locations_table.all.to_a
+
+
     view "locations"
 end
 
