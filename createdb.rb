@@ -30,8 +30,8 @@ end
 locations_table = DB.from(:locations)
 
 locations_table.insert(title: "Alger", 
-                    description: "Here we go again bacon burger taco fans, another Bacon Burger Taco Fest is here!",
-                    date: "June 21",
+                    description: "The snowmobile capital of Michigan",
+                    date: "https://www.fishweb.com/maps/alger/trails/munising_autrain/map.gif",
                     location: "Kellogg Global Hub")
 
 locations_table.insert(title: "Alpena", 
@@ -40,21 +40,21 @@ locations_table.insert(title: "Alpena",
                     location: "Nowhere")
 
 locations_table.insert(title: "Cheboygan", 
-                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
+                    description: "Ride all the way to the Bridge!",
+                    date: "https://www.fishweb.com/maps/cheboygan/cheboygan-co.gif",
                     location: "Nowhere")
 
 locations_table.insert(title: "Grand Traverse", 
-                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
+                    description: "The prettiest place to ride in Michigan",
+                    date: "https://www.fishweb.com/maps/grandtraverse/grandtraverse-co.gif",
                     location: "Nowhere")
 
 locations_table.insert(title: "Oscoda", 
-                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
+                    description: "Come check out Ma Deeters in Luzerne",
+                    date: "https://www.fishweb.com/maps/oscoda/oscoda-co.gif",
                     location: "Nowhere")
 
 locations_table.insert(title: "Roscommon", 
-                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "https://www.fishweb.com/maps/alpena/alpena-co.gif",
+                    description: "Home of Tip-up Town",
+                    date: "https://www.fishweb.com/maps/roscommon/roscommon-co.gif",
                     location: "Nowhere")
