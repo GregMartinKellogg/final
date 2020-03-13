@@ -14,6 +14,22 @@ before { puts; puts "--------------- NEW REQUEST ---------------"; puts }       
 after { puts; }                                                                       #
 #######################################################################################
 
+# Twilio ##############################################################################
+# put your API credentials here (found on your Twilio dashboard)
+account_sid = ENV["TWILIO_ACCOUNT_SID"]
+auth_token = ENV["TWILIO_AUTH_TOKEN"]
+
+# set up a client to talk to the Twilio REST API
+client = Twilio::REST::Client.new(account_sid, auth_token)
+
+# send the SMS from your trial Twilio number to your verified non-Twilio number
+client.messages.create(
+ from: "+14439173656", 
+ to: "+15862551624",
+ body: "Hey KIEI 451!"
+)
+#######################################################################################
+
 locations_table = DB.from(:locations)
 reviews_table = DB.from(:reviews)
 users_table = DB.from(:users)
