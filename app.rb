@@ -23,11 +23,11 @@ auth_token = ENV["TWILIO_AUTH_TOKEN"]
 client = Twilio::REST::Client.new(account_sid, auth_token)
 
 # send the SMS from your trial Twilio number to your verified non-Twilio number
-client.messages.create(
- from: "+14439173656", 
- to: "+15862551624",
- body: "Hey KIEI 451!"
-)
+# client.messages.create(
+#  from: "+14439173656", 
+#  to: "+15869452662",
+#  body: "Hey KIEI 451!"
+# )
 #######################################################################################
 
 locations_table = DB.from(:locations)
@@ -77,6 +77,14 @@ post "/users/create" do
     puts params
     hashed_password = BCrypt::Password.create(params["password"])
     users_table.insert(name: params["name"], email: params["email"], password: hashed_password)
+
+    # send the SMS from your trial Twilio number to your verified non-Twilio number
+    client.messages.create(
+    from: "+14439173656", 
+    to: "+15862551624",
+    body: "A new user has been created, better make sure they're not a creep..."
+    )
+
     view "create_user"
 end
 
