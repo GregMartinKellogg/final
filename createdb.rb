@@ -12,7 +12,7 @@ DB.create_table! :locations do
   String :date
   String :location
 end
-DB.create_table! :rsvps do
+DB.create_table! :reviews do
   primary_key :id
   foreign_key :location_id
   foreign_key :user_id

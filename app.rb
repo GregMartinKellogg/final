@@ -15,7 +15,7 @@ after { puts; }                                                                 
 #######################################################################################
 
 locations_table = DB.from(:locations)
-rsvps_table = DB.from(:rsvps)
+reviews_table = DB.from(:reviews)
 users_table = DB.from(:users)
 
 before do
@@ -30,25 +30,25 @@ end
 
 get "/locations/:id" do
     @location = locations_table.where(id: params[:id]).to_a[0]
-    @rsvps = rsvps_table.where(location_id: @location[:id])
-    @going_count = rsvps_table.where(location_id: @location[:id], going: true).count
+    @reviews = reviews_table.where(location_id: @location[:id])
+    @going_count = reviews_table.where(location_id: @location[:id], going: true).count
     @users_table = users_table
     view "location"
 end
 
-get "/locations/:id/rsvps/new" do #figure it out
+get "/locations/:id/reviews/new" do #figure it out
     @location = locations_table.where(id: params[:id]).to_a[0]
-    view "new_rsvp"
+    view "new_review"
 end
 
-get "/locations/:id/rsvps/create" do
+get "/locations/:id/reviews/create" do
     puts params
     @location = locations_table.where(id: params["id"]).to_a[0]
-    rsvps_table.insert(location_id: params["id"],
+    reviews_table.insert(location_id: params["id"],
                        user_id: session["user_id"],
                        going: params["going"],
                        comments: params["comments"])
-    view "create_rsvp"
+    view "create_review"
 end
 
 get "/users/new" do

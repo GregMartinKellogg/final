@@ -1,0 +1,27 @@
+<h1>Give your review of the trails in <%= @location[:title] %></h1>
+
+<form action="/locations/<%= @location[:id] %>/reviews/create">
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label>Would you recommend?</label>
+            <select class="form-control" name="going">
+            <option value="1">Yes I would recommend</option>
+            <option value="0">No, those trails suck</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Comments</label>
+            <textarea class="form-control" rows="3" name="comments"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    <div class="col-sm-1">
+        <img src="https://res.cloudinary.com/teepublic/image/private/s--aYYXmHDl--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_000000,e_outline:48/co_000000,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1567084925/production/designs/5780002_0.jpg" width="300" height="300" />
+    </div>
+
+ </div>
+
+</form>
